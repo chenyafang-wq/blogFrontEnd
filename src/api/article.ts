@@ -2,9 +2,10 @@ import request from "../utils/request";
 export async function getArticleList(
   pageNum: number = 1,
   pageSize: number = 999,
-  keyword: string = ""
+  keyword: string = "",
+  tagId?: number
 ) {
-  return request.get("/articles", { pageNum, pageSize, keyword });
+  return request.get("/articles", { pageNum, pageSize, keyword, tagId });
 }
 
 export async function getArticleById(id: number) {

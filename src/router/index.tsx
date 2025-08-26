@@ -48,10 +48,26 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      // 默认（index）路由展示 About 页面
       {
         index: true,
+        element: (
+            <Suspense
+              fallback={
+                <Spin
+                  fullscreen={true}
+                  indicator={<Loading />}
+                  className="d-flex justify-center"
+                />
+              }
+            >
+              <About />
+            </Suspense>
+        ),
+      },
+      // 显式的 /about 路由，依然可访问
+      {
         path: "/about",
-
         element: (
             <Suspense
               fallback={

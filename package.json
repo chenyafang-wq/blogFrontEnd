@@ -21,6 +21,7 @@
         "dayjs": "^1.11.13",
         "i18next": "^23.16.4",
         "lodash": "^4.17.21",
+        "pnpm": "^10.15.0",
         "prismjs": "^1.29.0",
         "quill": "^2.0.2",
         "react": "^18.3.1",
@@ -38,7 +39,8 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "cross-env NODE_ENV=development REACT_APP_API_URL=https://test.yolkmen.com craco start",
+        "start:dev": "cross-env NODE_ENV=development REACT_APP_API_URL=http://localhost:1323 craco start",
+        "start:test": "cross-env NODE_ENV=development REACT_APP_API_URL=https://test.yolkmen.com craco start",
         "start:prod": "cross-env NODE_ENV=production REACT_APP_API_URL=https://yolkmen.com craco start",
         "build": "cross-env NODE_ENV=development REACT_APP_API_URL=http://localhost:1323 craco build",
         "build:prod": "cross-env NODE_ENV=production REACT_APP_API_URL=http://47.121.201.137:5757 craco build",
